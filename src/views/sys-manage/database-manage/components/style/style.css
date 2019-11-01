@@ -1,0 +1,9 @@
+.UserComponents .el-form-item__label{
+  width:80px;
+}
+.UserComponents .el-input__inner{
+  width: 220px;
+}
+.UserComponents .textarea_box .el-textarea__inner{
+  width: 550px;
+}

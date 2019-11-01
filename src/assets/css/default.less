@@ -1,0 +1,212 @@
+/** 常用色值 **/
+@colorA: #ffffff;
+@colorB: #449892;
+@colorC: #72BAC5;
+@colorD: #11172D;
+@bg-colorA: rgba(255,255,255,0.08);
+@bg-colorB: rgba(255,255,255,0.15);
+@bg-colorC: rgba(255,255,255,0.4);
+@bg-colorD: rgba(255,255,255,1);
+@bg-colorE: rgba(255,255,255,0.05);
+@bg-colorF: rgba(255,255,255,0.1);
+
+
+/** 常用字体大小 **/
+@fontA: 14px;
+@fontB: 16px;
+@fontC: 20px;
+@fontD: 24px;
+@fontE: 36px;
+@fontF: 28px;
+@fontG: 30px;
+@fontH: 18px;
+/** 封装各方向箭头标志 **/
+.arrow(@direction,@color){
+  width: 12px;
+  height: 12px;
+  border: 2px solid @color;
+  display: inline-block;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.arrow(left,@color){
+  border-top: transparent;
+  border-right: transparent;
+}
+.arrow(right,@color){
+  border-left: transparent;
+  border-bottom: transparent;
+}
+.arrow(top,@color){
+  border-right: transparent;
+  border-bottom: transparent;
+}
+.arrow(bottom,@color){
+  border-left: transparent;
+  border-top: transparent;
+}
+
+/** 通用a提示样式 **/
+.tip-a{
+  color: @colorA;
+  text-decoration: underline;
+  cursor: help;
+}
+/** 通用过渡 **/
+.transitions(){
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;	/* Firefox 4 */
+  -webkit-transition: all 0.3s linear;	/* Safari 和 Chrome */
+  -ms-transition: all 0.3s linear;	/* ie */
+  -o-transition: all 0.3s linear;	/* Opera */
+}
+
+/** 小手鼠标 **/
+.pointer{
+  cursor: pointer;
+}
+/** 左边距 **/
+.padding-left25{
+  padding-left:25px;
+}
+// 倒三角
+.half-radius(){
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right:35px solid transparent;
+  border-top:31px solid transparent;
+}
+.min-heights{
+  min-height: calc(100vh - 330px)
+}
+.min-heights280{
+  min-height: calc(100vh - 280px)
+}
+.min-heights365{
+  min-height: calc(100vh - 315px)
+}
+.min-heights370{
+  min-height: calc(100vh - 320px)
+}
+.min-heights385{
+  min-height: calc(100vh - 335px)
+}
+.txt-center-top{
+  text-align: center;
+  margin-top:10px;
+}
+.txt-center{
+  text-align: center;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clear{
+  clear: both;
+}
+// 两行省略
+.text-overflow{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+// 通用边框按钮
+.border_button{
+  position: relative;
+  top:1px;
+  width: 68px;
+  display: inline-block;
+  background: #fff;
+  height: 34px;
+  border: 1px solid #449892;
+  padding:6px 18px;
+  border-radius: 8px;;
+  cursor: pointer;
+  color: #449892;
+  margin-right: 20px;
+}
+// 通用操作按钮样式
+.operation span {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1px;
+  margin-right: 18px;
+  cursor: pointer;
+}
+.operation span img {
+  position: relative;
+  top:1px;
+  margin-right: 5px;
+}
+.operation span:first-child {
+  color: #449892;
+}
+.operation span:nth-child(2) {
+  color: #BF3E3E;
+}
+.operation span:last-child {
+  color: #446998;
+}
+.pointer{
+  cursor: pointer;
+}
+.img_margin{
+  position: relative;
+  top:3px;
+  margin-right: 5px;
+}
+.left_tree_box{
+  width:220px;
+  margin-right:25px;
+}
+// 有左侧栏的情况下，表格通用宽度
+.table_box{
+  width: calc(100% - 245px);
+}
+.tree_box{
+  // padding: 12px;
+  background: white;
+  box-shadow:0px 3px 8px 0px rgba(207,213,217,0.6);
+  border-radius:8px;
+}
+// 含有展开的左侧查询框
+.queryInput{
+  width: calc(100% - 160px);
+}
+// 查询右侧含有展开按钮
+.queryBtn{
+  width: 160px;
+}
+.min_line_query{
+  max-height: 40px;
+  overflow: hidden;
+  // .transitions()
+}
+.max_line_query{
+  max-height: 200px;
+  overflow: hidden;
+  // .transitions()
+}
+.menu_logo{
+  width:30px;
+  height: 30px;
+  position: relative;
+  top: 4px;
+}
+
+.text_overflow{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

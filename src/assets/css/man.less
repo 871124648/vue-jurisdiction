@@ -1,0 +1,145 @@
+@import '~@/assets/css/default.less';
+.main-top,.main-centre,.main-bottom {
+  width:100%;
+}
+.main-centre{
+  margin:.27rem 0;
+}
+.yesterday,.this-month,.analysis-chart,.frozen li,.main-centre ul li,.main-bottom{
+  box-shadow: 0px 3px 8px 0px rgba(207,213,217,1);
+  border-radius: 8px;
+  background-color: white;
+}
+.yesterday,.this-month {
+  width: 100%;
+  height: 233px;
+  padding:23px 20px;
+  color:#449892;
+  font-size: @fontH;
+  .month_box{
+    width:62px;
+    height:33px;
+    line-height: 33px;
+    text-align: center;
+    color:white;
+    background:rgba(68,152,146,1);
+    border-radius:6px;
+  }
+  .quantity_box{
+    padding:26px 0 22px;
+    font-size: 26px;
+    text-align: center;
+    color: #F3B107;
+    border-bottom: 1px solid #EEEEEE;
+  }
+  .quantity_bottom{
+    padding: 25px 0;
+    .quantity_num{
+      margin:0 35px 0 35px;
+      color:#6E757A;
+    }
+  }
+}
+.frozen li {
+  width: 100%;
+  height: 73px;
+}
+.frozen li .meter,.frozen li .route {
+  padding: 12.5px 0 0 14px;
+}
+.frozen li .meter span,.frozen li .route span {
+  margin-left: 22px;
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+}
+.frozen li .meter span p,.frozen li .route span p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.frozen li .route span {
+  color: #6E757A;
+}
+.frozen li:first-child,li:nth-child(2) {
+  margin-bottom: 7px;
+}
+.frozen li:first-child {
+  background-color: #449892;
+}
+.frozen li:nth-child(2) {
+  background-color: #C5C5C5;
+}
+.analysis-chart {
+  width: 100%;
+  height: 236px;
+}
+.tableBackground {
+  width: 100%;
+  height: 248px;
+  box-shadow: 0px 3px 8px 0px rgba(207,213,217,1);
+}
+.main-centre ul li {
+  width: 100%;
+  height: 73px;
+}
+.main-centre ul li .money,.main-centre ul li .house {
+  padding: 10px 0 0 14px;
+}
+.main-centre ul li .money span,.main-centre ul li .house span {
+  margin-left: 22px;
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+}
+.main-centre ul li .house span {
+  margin-left: 20px;
+}
+.main-centre ul li .money span p:first-child,.main-centre ul li .house span p:first-child  {
+  font-size: 22px;
+  line-height: 33px;
+}
+.main-centre ul li .money span p:last-child,.main-centre ul li .house span p:last-child {
+  font-size: 14px;
+  line-height: 20px;
+}
+.main-centre ul li:first-child,.main-centre ul li:nth-child(2) {
+  margin-bottom: 15px;
+}
+.main-centre ul li:first-child {
+  background-color: #5EAC1B;
+}
+.main-centre ul li:nth-child(2) {
+  background-color: #44B5AE;
+}
+.main-centre ul li:last-child {
+  background-color: #F7B500;
+}
+.main-bottom {
+  padding:33px 25px;
+}
+.text_red{
+  color: red;
+}
+.table_title{
+  height: 37px;
+  line-height: 37px;
+  padding-left: 10px;
+  background-color:#E2E6EA;
+  img{
+    margin-right: 6px;
+    position: relative;
+    top:3px;
+  }
+}
+.echar_title{
+  margin-right:27px;
+}
+.rdio_box{
+  margin-top: -5px;
+}
+.margin10{
+  padding: 10px 0 0 10px;;
+}
+#myChart{
+  margin-top:-20px;
+}
