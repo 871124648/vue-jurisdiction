@@ -317,9 +317,9 @@ export default {
     menuImg (name) {
       if (name === '首页') {
         return require('@/assets/images/menu_h.png')
-      } else if (name === '抄控管理') {
+      } else if (name === '员工管理') {
         return require('@/assets/images/menu_ck.png')
-      } else if (name === '题库管理') {
+      } else if (name === '部门管理') {
         return require('@/assets/images/menu_da.png')
       } else if (name === '缴费管理') {
         return require('@/assets/images/menu_jf.png')

@@ -33,16 +33,7 @@ const webpackConfig = {
     host: 'localhost',
     inline: true,
     port: 3333,
-    publicPath: '/',
-    proxy: {
-      '/api': {
-        target: 'http://47.111.1.69:9898/api', // 测试接口
-        changeOrigin: true, // 跨域
-        pathRewrite: {
-          '^/api': ''
-        }
-      }
-    }
+    publicPath: '/'
   },
   plugins: [
     new VueLoaderPlugin(),

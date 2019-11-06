@@ -18,11 +18,6 @@ export default function request (options) {
     }
   }
   url = host + path
-  // 加时间戳，防止ie9拿接口缓存(加载表单序列化之前)
-  data && (data.tm = new Date().getTime())
-  !data && (data = {
-    tm: new Date().getTime()
-  })
   let parData = isForm ? qs.stringify(data) : data
   if (isForm) {
     axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded' // 表单传值
@@ -36,13 +31,6 @@ export default function request (options) {
     authorization = sessionStorage.getItem('token')
     axios.defaults.headers.Authorization = authorization
   }
-  if (sessionStorage.getItem('customerId') && sessionStorage.getItem('customerId') !== 'null') {
-    axios.defaults.headers.customerId = JSON.parse(sessionStorage.getItem('customerId'))
-  }
-  if (sessionStorage.getItem('districtId') && sessionStorage.getItem('districtId') !== 'null') {
-    axios.defaults.headers.districtId = JSON.parse(sessionStorage.getItem('districtId'))
-  }
-  // console.log('走这里',JSON.parse(sessionStorage.getItem('customerId')), typeof JSON.parse(sessionStorage.getItem('customerId')))
   switch (method.toLowerCase()) {
     case 'get':
       return axios.get(url, {

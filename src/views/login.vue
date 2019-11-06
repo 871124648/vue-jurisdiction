@@ -2,9 +2,6 @@
   <div>
     <div class="login_wrap">
       <div class="user_login">
-        <!-- <div class="user_title">
-          <span class="header-title">员工管理系统</span>
-        </div> -->
         <div class="user-content">
           <div class="input_container">
             <input type="text" v-model="username" v-on:keyup.enter="handleLogin" class="input_class" placeholder="用户名">
@@ -59,8 +56,8 @@ export default {
       }
       this.loading = true
       login({
-        account: this.username,
-        accountPassword: this.password
+        userPhone: this.username,
+        userPassword: this.password
       }).then(res => {
         if (res) {
           if (this.checked) {
@@ -68,18 +65,14 @@ export default {
             localStorage.setItem('password', this.password)
           }
           sessionStorage.setItem('token', res.token)
+          sessionStorage.setItem('deptCount', res.deptCount) // 部门数量
+          sessionStorage.setItem('staffCount', res.staffCount) // 员工数量
           this.$session.set('customerId', res.customerId)
           this.$session.set('districtId', res.districtId)
           this.$session.set('username', res.userName)
           this.$session.set('nickName', res.userName)
           this.$session.set('userId', res.userId)
           this.$session.set('logo', res.logo)
-          // 模拟返回的权限菜单
-          // let menuData = [{
-          //     name: '首页',
-          //     url: '/main'
-          //   }]
-          // menuData = menuData.concat(res.menus) // menuData
           this.$session.set('userAuthorities',
           [
             {
@@ -95,16 +88,7 @@ export default {
             {
               name: '部门管理',
               children: [
-                {name: '部门数据', url:'department', button: [{name: '查询'},{name: '新增'}, {name: '编辑'}, {name: '删除'}, {name: '导入'}, {name: '导出'}]}
-              ]
-            },
-            {
-              name: '系统管理',
-              children: [
-                {name: '菜单管理', url: '/menu', button: [{name: '查询'}, {name: '新增'}, {name: '编辑'}, {name: '删除'}]},
-                {name: '用户管理', url: '/user', button: [{name: '查询'}, {name: '新增'}, {name: '编辑'}, {name: '删除'}]},
-                {name: '角色管理', url: '/role', button: [{name: '查询'}, {name: '新增'}, {name: '编辑'}, {name: '删除'}]},
-                {name: '系统日志', url: '/log', button: [{name: '查询'}, {name: '新增'}, {name: '编辑'}, {name: '删除'}]}
+                {name: '部门数据', url: '/department', button: [{name: '查询'},{name: '新增'}, {name: '编辑'}, {name: '删除'}, {name: '导入'}, {name: '导出'}]}
               ]
             }
           ]
