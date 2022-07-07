@@ -18,7 +18,7 @@
     "echarts": "^4.3.0",
     "element-ui": "2.5.4",
     "localforage": "^1.7.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "qs": "^6.7.0",
     "save": "^2.4.0",
     "uglifyjs-webpack-plugin": "^2.1.3",
